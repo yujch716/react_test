@@ -28,7 +28,7 @@ export function TestPage() {
     return ( 
     <div> 
         <Helmet> 
-            <title>{metaData.title}</title> 
+            <title>{metaData.enterprise_name}</title> 
             <meta name="description" content={metaData.enterprise_name} /> 
             <meta property="og:title" content={metaData.posting_field} /> 
             <meta property="og:description" content={metaData.posting_position} /> 
