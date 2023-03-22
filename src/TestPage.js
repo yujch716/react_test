@@ -8,7 +8,7 @@ export function TestPage() {
 
     useEffect(() => { 
         let data = {'posting_id':id, 'history_url':'경로 알수없음'}
-        fetch('https://api-test.steadhr.com/api/v1/applicant/get-posting-page',  {
+        fetch('https://api-test.steadhr.com/api/v1/applicant/posting-page',  {
             method: 'POST', // *GET, POST, PUT, DELETE 등
             mode: 'cors', // no-cors, *cors, same-origin
             cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
@@ -34,7 +34,12 @@ export function TestPage() {
             <meta property="og:description" content={metaData.posting_position} /> 
             <meta property="og:image" content={metaData.enterprise_background} /> 
         </Helmet> 
-            테스트페이지
+            테스트페이지 <br />
+            {metaData.posting_title} <br />
+            {metaData.posting_field} <br />
+            {metaData.posting_position} <br />
+            {metaData.posting_work_info} <br />
+            {metaData.enterprise_explanation}
     </div> 
     ); 
 } 
